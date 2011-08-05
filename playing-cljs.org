@@ -1,0 +1,12 @@
+* Hello world example
+Created project 
+
+#+begin_example
+lein new playing-cljs
+#+end_example
+
+
+* Creating a simple layout with Google Closure
+** Reading Closure Book Chapter 8
+* Creates a simple model and show it in the layout
+* When model is updated, the UI must show the changes
