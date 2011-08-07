@@ -20,3 +20,4 @@ JSON
 
 * Bugs
 ** TODO The buttons in the toolbar does not have style. The button-bg.gif is not loaded.
+** TODO Remove out directory from versioned code in gitHub
