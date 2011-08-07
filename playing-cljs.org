@@ -6,7 +6,17 @@ lein new playing-cljs
 #+end_example
 
 
-* Creating a simple layout with Google Closure
-** Reading Closure Book Chapter 8
-* Creates a simple model and show it in the layout
-* When model is updated, the UI must show the changes
+* Visualizing matches
+** DONE Creating a simple layout with Google Closure
+The layout contains a toolbar that shows a few menu options: Matches, Completed, 
+** TODO Creates a simple model and show it in the layout
+- Creates the matches and show it in the Layout
+- Create 'Match' object
+** TODO Add a form to filter the list of matches
+** TODO Server side integration:
+When model is updated, the UI must show the changes
+Clojure application that returns the matches in a clojure code, not
+JSON
+
+* Bugs
+** TODO The buttons in the toolbar does not have style. The button-bg.gif is not loaded.
