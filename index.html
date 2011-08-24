@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"/>
 <title>Pachanga!!</title>
-<script type="text/javascript" src="out/goog/base.js"></script>
-<script type="text/javascript" src="core.js"></script>
+<script type="text/javascript" src="out/goog/base.js" charset="UTF-8"></script>
+<script type="text/javascript" src="core.js" charset="UTF-8"></script>
 <script>
   goog.require('playing_cljs.core');
 </script>
@@ -15,12 +16,14 @@
   <div class="container-fluid">
     <div class="sidebar">
     </div>
-    <div class="content">
-     <script type="text/javascript">
+    <div id="content" class="content">
+   </div>
+  </div>
+
+       <script type="text/javascript" charset="UTF-8">
       playing_cljs.core.main();
       </script>
-    </div>
-  </div>
+
 </body>
 </html>
 

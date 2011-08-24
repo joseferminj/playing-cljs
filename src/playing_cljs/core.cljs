@@ -25,7 +25,7 @@
 (defn ^:export main []
   ;; (supertable-make-dom (dom/get-element-by-class "content")
   ;;                      table)
-  (dom/append (dom/get-element-by-class "content")
-              (dom/build [div: "Prueba"])))
+  (dom/append (dom/get-element "content")
+              (dom/build [:div "Prueba"])))
 
 
