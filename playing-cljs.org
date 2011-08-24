@@ -21,3 +21,6 @@ JSON
 * Bugs
 ** TODO The buttons in the toolbar does not have style. The button-bg.gif is not loaded.
 ** TODO Remove out directory from versioned code in gitHub
+
+* Resources
+- [[http://whollyweirdwyrd.blogspot.com/2009/12/closure-library-tutorial-tasks-part-1.html][Tasks tutorial]]

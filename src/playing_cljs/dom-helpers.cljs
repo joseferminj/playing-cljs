@@ -15,6 +15,11 @@
   [id]
   (dom/getElement (name id)))
 
+(defn get-element-by-class
+  "Return the element with the passed id."
+  [id]
+  (dom/getElementsByTagNameAndClass (name id)))
+
 (defn append
   "Append all children to parent."
   [parent & children]

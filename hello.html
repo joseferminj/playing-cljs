@@ -25,31 +25,17 @@ overflow: auto;
 </style>
 
 <script type="text/javascript" src="out/goog/base.js"></script>
-<script type="text/javascript" src="core.js"></script>
+<script type="text/javascript" src="borrame.js"></script>
 <script type="text/javascript">
-  goog.require('playing_cljs.core');
+  goog.require('playing_cljs.borrame');
 </script>
 
 
 <body>
-<!-- The buttons will go in here-->
-<div id="buttons"></div>
-
-<!-- The tabbar will go in here-->
-<div id="top" class="goog-tab-bar goog-tab-bar-top">
-<div class="goog-tab goog-tab-selected">Hello</div>
-<div class="goog-tab">Settings</div>
-<div class="goog-tab">More</div>
-<div class="goog-tab goog-tab-disabled">Advanced</div>
-</div>
-<div class="goog-tab-bar-clear"></div>
-<div id="top_content" class="goog-tab-content">
-  I have nothing.
-</div>
 
 <!-- Call the javascript -->
 <script>
-playing_cljs.core.main();
+playing_cljs.core.test();
 </script>
 
 
