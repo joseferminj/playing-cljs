@@ -1,31 +1,44 @@
 (ns playing-cljs.core
   (:require
-   [playing-cljs.dom-helpers :as dom]))      
+   [playing-cljs.dom-helpers :as dom]
+   [pinot.html :as ph]))      
 
-(defn table-cells-dom [cells]
-  (map #(vec(list "td" %)) cells))
+(defn table-cell-dom [cell]
+  [:td cell])
+
+(defn table-row-dom [row]
+  [:tr
+   (map table-cell-dom row)])
 
 (defn table-dom [table]
-  ["table"
-   ["tbody"
-    (map #(vec (list "tr" (table-cells-dom %))) table)]])
+  [:table
+   [:tbody
+    (map table-row-dom table)
+    ]])
 
 (defn table-make-dom [table]
-  (dom/build (table-dom table)))
+  (ph/html (table-dom table)))
 
-(defn supertable-make-dom [container table]
-  (dom/append container
-              (table-make-dom (vec (first table)))
-              (table-make-dom (rest table))))
+;; (defn supertable-make-dom [container table]
+;;   (ph/append-to container
+;;                 [(table-make-dom (conj [] (first table)))
+;;                 (table-make-dom (rest table))]))
+
 
 (def table  [["Lunes" "Martes" "Miercoles" "Jueves" "Viernes" "Sabado" "Domingo"]
                                    ["x" "x" "x" "x" "x" "x" "x"]
                                    ["x" "x" "x" "x" "x" "x" "x"]])
 
+
 (defn ^:export main []
   ;; (supertable-make-dom (dom/get-element-by-class "content")
   ;;                      table)
-  (dom/append (dom/get-element "content")
-              (dom/build [:div "Prueba"])))
+  
+  (ph/append-to (dom/get-element "content")
+                (table-make-dom2 table))
+
+  ;; (supertable-make-dom (dom/get-element "content")
+  ;;                      table)
+  )
 
 
